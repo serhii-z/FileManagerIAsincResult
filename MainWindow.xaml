@@ -1,0 +1,39 @@
+﻿<Window x:Class="FileMenagerIAsincResult.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileMenagerIAsincResult"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,-29,-0.4,0" Background="Gainsboro">
+        <Menu HorizontalAlignment="Left" Height="21" Margin="10,35,0,0" VerticalAlignment="Top" Width="135">
+            <MenuItem Header="Directory" Height="21">
+                <MenuItem x:Name="delDirectory" Header="Delete" Click="DelDirectory_Click"></MenuItem>
+                <MenuItem x:Name="createDirectory" Header="Create" Click="CreateDirectory_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="File" >
+                <MenuItem x:Name="delFile" Header="Delete" Click="DelFile_Click"></MenuItem>
+                <MenuItem x:Name="createFile" Header="Create" Click="CreateFile_Click"></MenuItem>
+                <MenuItem x:Name="writeFile" Header="Write" Click="WriteFile_Click"></MenuItem>
+                <MenuItem x:Name="readFile" Header="Read" Click="ReadFile_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Lists" Width="40">
+                <MenuItem Header="Show" Click="MenuItem_Click"></MenuItem>
+
+            </MenuItem>
+
+        </Menu>
+        <TreeView x:Name="treeView" Margin="175,35,320,56" SelectedItemChanged="TreeView_SelectedItemChanged"></TreeView>
+        <TextBox x:Name="pathTxtBox" HorizontalAlignment="Left" Height="23" Margin="24,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.487,1.103"/>
+        <TextBox x:Name="nameTxtBox" HorizontalAlignment="Left" Height="23" Margin="24,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,154,0,0" TextWrapping="Wrap" Text="Enter path:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,246,0,0" TextWrapping="Wrap" Text="Enter name:" VerticalAlignment="Top"/>
+        <Button x:Name="cliarBtn" Content="Clear" HorizontalAlignment="Left" Margin="24,380,0,0" VerticalAlignment="Top" Width="75" Click="CliarBtn_Click"/>
+        <TextBox x:Name="readTextBox" HorizontalAlignment="Left" Height="113" Margin="516,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="228" MouseDown="ReadTextBox_MouseDown"/>
+        <TextBox x:Name="writeTextBox" HorizontalAlignment="Left" Height="23" Margin="516,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="228" MouseDown="WriteTextBox_MouseDown"/>
+        <Label Content="Read from file:" HorizontalAlignment="Left" Margin="516,38,0,0" VerticalAlignment="Top"/>
+        <Label Content="Write to file:" HorizontalAlignment="Left" Margin="516,236,0,0" VerticalAlignment="Top"/>
+     
+    </Grid>
+</Window>
